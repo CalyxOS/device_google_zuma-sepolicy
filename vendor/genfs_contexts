@@ -35,6 +35,7 @@ genfscon debugfs /google_battery                                        u:object
 genfscon debugfs /pm_genpd/pm_genpd_summary                             u:object_r:vendor_pm_genpd_debugfs:s0
 genfscon debugfs /usb                                                   u:object_r:vendor_usb_debugfs:s0
 genfscon debugfs /maxfg                                                 u:object_r:vendor_maxfg_debugfs:s0
+genfscon debugfs /regmap                                                u:object_r:vendor_regmap_debugfs:s0
 
 # Extcon
 genfscon sysfs /devices/platform/10cb0000.hsi2c/i2c-0/0-0025/extcon/extcon0   u:object_r:sysfs_extcon:s0
@@ -142,7 +143,16 @@ genfscon sysfs /devices/platform/acpm_mfd_bus@15500000/i2c-0/0-001f/s2mpg14-mete
 genfscon sysfs /devices/platform/acpm_mfd_bus@15510000/i2c-1/1-002f/s2mpg15-meter/s2mpg15-odpm/iio:device1/lpf_current   u:object_r:sysfs_odpm:s0
 
 # Power Stats
+genfscon sysfs /devices/platform/10c80000.hsi2c/i2c-0/0-0008/power_stats u:object_r:sysfs_power_stats:s0
+genfscon sysfs /devices/platform/10c80000.hsi2c/i2c-1/1-0008/power_stats u:object_r:sysfs_power_stats:s0
+genfscon sysfs /devices/platform/10c80000.hsi2c/i2c-2/2-0008/power_stats u:object_r:sysfs_power_stats:s0
+genfscon sysfs /devices/platform/10c80000.hsi2c/i2c-3/3-0008/power_stats u:object_r:sysfs_power_stats:s0
+genfscon sysfs /devices/platform/10c80000.hsi2c/i2c-4/4-0008/power_stats u:object_r:sysfs_power_stats:s0
+genfscon sysfs /devices/platform/10c80000.hsi2c/i2c-5/5-0008/power_stats u:object_r:sysfs_power_stats:s0
 genfscon sysfs /devices/platform/10c80000.hsi2c/i2c-6/6-0008/power_stats u:object_r:sysfs_power_stats:s0
+genfscon sysfs /devices/platform/10c80000.hsi2c/i2c-7/7-0008/power_stats u:object_r:sysfs_power_stats:s0
+genfscon sysfs /devices/platform/10c80000.hsi2c/i2c-8/8-0008/power_stats u:object_r:sysfs_power_stats:s0
+genfscon sysfs /devices/platform/10c80000.hsi2c/i2c-9/9-0008/power_stats u:object_r:sysfs_power_stats:s0
 genfscon sysfs /devices/platform/12100000.pcie/power_stats               u:object_r:sysfs_power_stats:s0
 genfscon sysfs /devices/platform/13120000.pcie/power_stats               u:object_r:sysfs_power_stats:s0
 genfscon sysfs /devices/platform/cpif/modem/power_stats                  u:object_r:sysfs_power_stats:s0
@@ -483,6 +493,12 @@ genfscon sysfs /devices/platform/17000000.aoc/control/memory_votes_ff1      u:ob
 genfscon sysfs /devices/platform/17000000.aoc/control/udfps_set_clock_source    u:object_r:sysfs_aoc_udfps:s0
 genfscon sysfs /devices/platform/17000000.aoc/control/udfps_get_osc_freq        u:object_r:sysfs_aoc_udfps:s0
 genfscon sysfs /devices/platform/17000000.aoc/control/udfps_get_disp_freq       u:object_r:sysfs_aoc_udfps:s0
+
+# Faceauth
+genfscon sysfs /sys/kernel/vendor_mm/gcma_heap/trusty:faceauth_rawimage_heap/max_usage_kb u:object_r:sysfs_faceauth_rawimage_heap:s0
+
+# Bluetooth
+genfscon sysfs /devices/platform/155d0000.serial/uart_dbg                    u:object_r:sysfs_bt_uart:s0
 
 # OTA
 genfscon sysfs /devices/platform/13200000.ufs/pixel/boot_lun_enabled           u:object_r:sysfs_ota:s0
